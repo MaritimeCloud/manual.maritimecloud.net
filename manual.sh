@@ -26,7 +26,7 @@ elif [ "$1" = "site" ]; then
     cp target/images/* ../manual/images/
     git add ../manual/index.html
     git add ../manual/images/*
-    git commit -m "update identity documentation"
+    git commit -m "update manual"
     git push
     git checkout master
     exit   
