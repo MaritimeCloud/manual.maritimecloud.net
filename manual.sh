@@ -21,11 +21,11 @@ elif [ "$1" = "site" ]; then
     cp images/*.png target/images/
     
     git checkout gh-pages
-    cp target/manual.html ../index.html
-    mkdir -p ../images
-    cp target/images/* ../images/
-    git add ../index.html
-    git add ../images/*
+    cp target/manual.html index.html
+    mkdir -p images
+    cp target/images/* images/
+    git add index.html
+    git add images/*
     git commit -m "update manual"
     git push
     git checkout master
@@ -40,4 +40,5 @@ fi
 
 echo "  pdf        Generates documentation in pdf"
 echo "  html       Generates documentation in html"
+echo "  site       Generates documentation in html and push to GitHub Pages"
 
