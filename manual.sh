@@ -21,11 +21,11 @@ elif [ "$1" = "site" ]; then
     cp images/*.png target/images/
     
     git checkout gh-pages
-    cp target/manual.html ../manual/index.html
-    mkdir -p ../identity/images
-    cp target/images/* ../manual/images/
-    git add ../manual/index.html
-    git add ../manual/images/*
+    cp target/manual.html ../index.html
+    mkdir -p ../images
+    cp target/images/* ../images/
+    git add ../index.html
+    git add ../images/*
     git commit -m "update manual"
     git push
     git checkout master
