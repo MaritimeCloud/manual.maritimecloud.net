@@ -275,6 +275,49 @@ image:image22.png[image,width=374,height=148]
 
 __NOTE__: It is very important that you download the certificate, because it is the only time, that you can download the public- and private key.
 
+
+==== Converting the certificate to a different format
+
+The issued certificate is supplied in PEM (also known as PKCS #8) format, but it can easily be converted into other formats. There are several tools available that can do this, but we will recommend http://keystore-explorer.org[KeyStore Explorer] which is a free, crossplatform and userfriendly tool. If you download, install and run KeyStore Explorer you will see this screen:
+
+image:keystore-explorer-start.png[]
+
+Click the "__Create a new KeyStore__" marked with the red circle. This will open a window that will let you choose the type of the new keystore. In this case we will choose JKS, which is normally used for Java applications, but you can choose a different format if needed.
+
+image:keystore-explorer-new-keystore-type.png[]
+
+You have now created an empty keystore, and now the issued client certificate must be imported into the keystore. Click the "__Import Key Pair__" icon marked with a red circle:
+
+image:keystore-explorer-empty-keystore.png[]
+
+Now choose the type of the key pair to import, in this case "__PKCS #8__".
+
+image:keystore-explorer-key-pair-type.png[]
+
+In the new window you should click browse and choose the files for the Private Key and Certificate, respectively. Note that the "__Encrypted Private Key__" checkbox should be unchecked and the "__Decryption Password__" field should be empty.
+
+image:keystore-explorer-select-key-pair.png[]
+
+Now supply a key pair alias that will be used to find/identify the key pair in the keystore.
+
+image:keystore-explorer-key-pair-alias.png[]
+
+You will now have to enter a password for the imported keystore. This will be needed when extracting the certificate key pair from the new keystore.
+
+image:keystore-explorer-key-pair-password.png[]
+
+The key pair (private key and certificate) has now been loaded into the new keystore, and will be shown in the list. Click the "__Save__" icon to save the keystore to a file. 
+
+image:keystore-explorer-new-keystore-save1.png[]
+
+You will know have to enter a password for the keystore itself. This will be needed when opening the keystore later.
+
+image:keystore-explorer-keystore-password.png[]
+
+Now choose a location for your new keystore and press "__Save__".
+
+image:keystore-explorer-keystore-password.png[]
+
 [[revoking-a-certificate]]
 ==== Revoking a certificate
 
