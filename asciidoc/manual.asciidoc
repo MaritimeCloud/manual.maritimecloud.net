@@ -316,7 +316,9 @@ image:keystore-explorer-keystore-password.png[]
 
 Now choose a location for your new keystore and press "__Save__".
 
-image:keystore-explorer-keystore-password.png[]
+image:keystore-explorer-new-keystore-save2.png[]
+
+Then locate the keystore you saved, load it into your application and you should be ready to authenticate using your client certificate.
 
 [[revoking-a-certificate]]
 ==== Revoking a certificate
