@@ -56,7 +56,6 @@ Icons and colors in the MC Portal follow the standard in the table:
 |image:image4.png[image,width=112,height=37] |Blue button: "Safe" button - no changes of the data in the Service- or Identity registry. A new page will be shown with the given functionality
 |image:image5.png[image,width=112,height=37] |Red button: "Unsafe" button - changes will be submitted to the data in the Service- or Identity registry
 |======================================================================================================================================================================================================
-
 [[not-yet-implemented]]
 == Not yet implemented
 
@@ -98,7 +97,7 @@ When your organization is federated into the Maritime Cloud, you can use your no
 
 Choose your organization in the list and you will be redirected to your organization’s federated login page.
 
-image:image6.png[image,width=242,height=152]
+image:image6.png[image,width=423,height=266]
 
 Once you have logged in with your organization login you will be redirected back to the MC Portal with access.
 
@@ -107,11 +106,11 @@ Once you have logged in with your organization login you will be redirected back
 
 When your organization is not federated, you will get access through the EfficienSea2 and STM Validation project test users.
 
-image:image7.png[image,width=249,height=163]
+image:image7.png[image,width=435,height=285]
 
 Choose the "__ProjectTestUsers__" and provide your login information in the next page.
 
-image:image8.png[image,width=250,height=139]
+image:image8.png[image,width=437,height=243]
 
 You will be redirected to the MC Portal with access.
 
@@ -127,7 +126,7 @@ The intention is to implement a finer grained access roles - for example, admin 
 
 The entities in your organizations Identity Registry can be found in the menu.
 
-image:image9.png[image,width=92,height=220]
+image:image9.png[image,width=161,height=385]
 
 The following subsections will explain how each entity is managed.
 
@@ -141,22 +140,22 @@ This is the "home" of the MC Portal. Here you can find various information about
 
 To update the contact information of your organization, click the "__Update__" button on the "__My Organization__" page.
 
-image:image10.png[image,width=353,height=333]
+image:image10.png[image,width=617,height=582]
 
 Make the changes and click "Update organization".
 
-image:image11.png[image,width=285,height=384]
+image:image11.png[image,width=498,height=672]
 
 [[change-logo]]
 ==== Change logo
 
 You can change the logo of your organization. The logo is only used in the list of organizations, which every user of the MC Portal can see. Should no logo be uploaded, a default logo will be displayed.
 
-image:image12.png[image,width=438,height=163]
+image:image12.png[image,width=766,height=285]
 
 To upload a new logo, click on the logo on the "__My Organization__" page and browse to the new logo.
 
-image:image13.png[image,width=227,height=172]
+image:image13.png[image,width=397,height=301]
 
 [[access-roles-1]]
 ==== Access Roles
@@ -180,24 +179,24 @@ Note: the only reason for creating Vessels and Devices is if you need a certific
 
 To create a Vessel or Device, click the "+" in the list.
 
-image:image14.png[image,width=268,height=243]
+image:image14.png[image,width=469,height=425]
 
 Fill out the form and click "__Register Device/Vessel__". The "__Permissions__" field is explained in depth in the <<permissions>> section of this guide.
 
-image:image15.png[image,width=254,height=230]
+image:image15.png[image,width=444,height=402]
 
 [[update]]
 ==== Update
 
 To create a Vessel or Device, choose it in the list and click the "__Update__" button on the details page.
 
-image:image16.png[image,width=252,height=257]
+image:image16.png[image,width=441,height=449]
 
-image:image17.png[image,width=315,height=138]
+image:image17.png[image,width=551,height=241]
 
 Make the changes and click "Update device".
 
-image:image18.png[image,width=316,height=201]
+image:image18.png[image,width=553,height=351]
 
 [[delete]]
 ==== Delete
@@ -206,7 +205,7 @@ Warning: If you delete an entity, all issued certificates will be revoked and be
 
 To delete click the "Delete" button on the entity you want to delete.
 
-image:image19.png[image,width=282,height=142]
+image:image19.png[image,width=493,height=248]
 
 [[users]]
 === Users
@@ -264,15 +263,15 @@ On every entity details page, there is a certificate section. This section is th
 
 To issue a new certificate, click on the "__Issue new Certificate__" button.
 
-image:image20.png[image,width=220,height=222]
+image:image20.png[image,width=385,height=388]
 
 Click on "__Issue Certificate__".
 
-image:image21.png[image,width=211,height=122]
+image:image21.png[image,width=369,height=213]
 
 And that is it. A certificate has been issued and is ready for download.
 
-image:image22.png[image,width=214,height=85]
+image:image22.png[image,width=374,height=148]
 
 __NOTE__: It is very important that you download the certificate, because it is the only time, that you can download the public- and private key.
 
@@ -292,7 +291,7 @@ The Service Registry consists of 3 levels:
 
 For more information of the 3 levels and how they are connected, please refer to the online documentation at http://maritimecloud.net or the "__How To?__" page in the MC Portal.
 
-image:image23.png[image,width=448,height=228]
+image:image23.png[image,width=784,height=399]
 
 The following subsections will describe each level in the service registry and how to manage.
 
@@ -306,20 +305,20 @@ Note: At the moment, service data is shown for all organizations with no possibi
 
 To view a Specification, click "__Specifications__" in the menu and a list of specifications appear. Click on any column of a row in the list to view that Specification.
 
-image:image24.png[image,width=524,height=213]
+image:image24.png[image,width=917,height=372]
 
 In the details page, you can see a subset of the Specification data. To view all data, you can download the actual documents that were uploaded upon the registration of the Specification.
 
-image:image25.png[image,width=338,height=133]
+image:image25.png[image,width=591,height=232]
 
-image:image26.png[image,width=340,height=134]
+image:image26.png[image,width=595,height=234]
 
 [[createregister]]
 ==== Create/Register
 
 To register a new Specification, click "__Specifications__" in the menu and a list of specifications appear. Click the "__Register new Specification__" button at the bottom of the list.
 
-image:image27.png[image,width=313,height=236]
+image:image27.png[image,width=547,height=413]
 
 Now you can upload 2 documents (see online documentation for templates of the documents):
 
@@ -330,7 +329,7 @@ When the XML-file is uploaded, there will be a validation of the Specification I
 
 When all is uploaded correctly, click the "__Register Specification__" button.
 
-image:image28.png[image,width=299,height=164]
+image:image28.png[image,width=523,height=287]
 
 [[update-2]]
 ==== Update
@@ -350,22 +349,22 @@ Not yet implemented.
 
 To view a Technical Design, click "__Designs__" in the menu and a list of Technical Designs appear. Click on any column of a row in the list to view that Design.
 
-image:image29.png[image,width=520,height=193]
+image:image29.png[image,width=910,height=337]
 
 You can also get to the design by clicking any column of a row if you have a Specification in view.
 
-image:image30.png[image,width=443,height=267]
+image:image30.png[image,width=775,height=467]
 
 In the details page, you can see a subset of the Technical Design data. To view all data, you can download the actual documents that were uploaded upon the registration of the Technical Design.
 
-image:image31.png[image,width=447,height=184]
+image:image31.png[image,width=782,height=322]
 
 [[createregister-1]]
 ==== Create/Register
 
 To register a new Technical Design, you need to select the Specification you want the Technical Design to implement. When the Specification is selected, you should click on the "__Register new Design__" at the Specification details page.
 
-image:image32.png[image,width=466,height=225]
+image:image32.png[image,width=815,height=393]
 
 Now you can upload 2 documents (see online documentation for templates of the documents):
 
@@ -376,7 +375,7 @@ When the XML-file is uploaded, there will be a validation of the Technical Desig
 
 When all is uploaded correctly, click the "__Register Design__" button.
 
-image:image33.png[image,width=482,height=261]
+image:image33.png[image,width=843,height=456]
 
 [[update-3]]
 ==== Update
@@ -396,22 +395,22 @@ Not yet implemented.
 
 To view an Instance, click "__Instances__" in the menu and a list of Instances appear. Click on any column of a row in the list to view that Instance.
 
-image:image34.png[image,width=516,height=193]
+image:image34.png[image,width=903,height=337]
 
 You can also get to the Instance by clicking any column of a row if you have a Technical Design in view.
 
-image:image35.png[image,width=505,height=277]
+image:image35.png[image,width=883,height=484]
 
 In the details page, you can see a subset of the Instance data. To view all data, you can download the actual documents that were uploaded upon the registration of the Instance.
 
-image:image36.png[image,width=441,height=186]
+image:image36.png[image,width=771,height=325]
 
 [[createregister-2]]
 ==== Create/Register
 
 To register a new Instance, you need to select the Technical Design you want the Instance to implement. When the Technical Design is selected, you should click on the "__Register new Instance__" at the Technical Design details page.
 
-image:image37.png[image,width=534,height=260]
+image:image37.png[image,width=934,height=455]
 
 Now you can upload 2 documents (see online documentation for templates of the documents):
 
@@ -422,7 +421,7 @@ When the XML-file is uploaded, there will be a validation of the Instance ID, wh
 
 When all is uploaded correctly, you can provide additional information to the service if you should need to issue certificates for the service later. This includes the field "Certificate Domain Name", where you should enter the name of the domain where the service will be hosted (e.g. Service.dma.dk) and the field "Permissions" which will also be embedded in the certificate. Should this not be relevant for your service, simply leave the fields empty.
 
-image:image38.png[image,width=298,height=406]
+image:image38.png[image,width=521,height=710]
 
 When everything is OK, click the "__Register Instance__" button.
 
