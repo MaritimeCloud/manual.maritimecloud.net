@@ -903,7 +903,70 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="revoking-a-certificate"><a class="anchor" href="#revoking-a-certificate"></a>6.5.3. Revoking a certificate</h4>
+<h4 id="converting-the-certificate-to-a-different-format"><a class="anchor" href="#converting-the-certificate-to-a-different-format"></a>6.5.3. Converting the certificate to a different format</h4>
+<div class="paragraph">
+<p>The issued certificate is supplied in PEM (also known as PKCS #8) format, but it can easily be converted into other formats. There are several tools available that can do this, but we will recommend <a href="http://keystore-explorer.org">KeyStore Explorer</a> which is a free, crossplatform and userfriendly tool. If you download, install and run KeyStore Explorer you will see this screen:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-start.png" alt="keystore explorer start"></span></p>
+</div>
+<div class="paragraph">
+<p>Click the "<em>Create a new KeyStore</em>" marked with the red circle. This will open a window that will let you choose the type of the new keystore. In this case we will choose JKS, which is normally used for Java applications, but you can choose a different format if needed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-new-keystore-type.png" alt="keystore explorer new keystore type"></span></p>
+</div>
+<div class="paragraph">
+<p>You have now created an empty keystore, and now the issued client certificate must be imported into the keystore. Click the "<em>Import Key Pair</em>" icon marked with a red circle:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-empty-keystore.png" alt="keystore explorer empty keystore"></span></p>
+</div>
+<div class="paragraph">
+<p>Now choose the type of the key pair to import, in this case "<em>PKCS #8</em>".</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-key-pair-type.png" alt="keystore explorer key pair type"></span></p>
+</div>
+<div class="paragraph">
+<p>In the new window you should click browse and choose the files for the Private Key and Certificate, respectively. Note that the "<em>Encrypted Private Key</em>" checkbox should be unchecked and the "<em>Decryption Password</em>" field should be empty.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-select-key-pair.png" alt="keystore explorer select key pair"></span></p>
+</div>
+<div class="paragraph">
+<p>Now supply a key pair alias that will be used to find/identify the key pair in the keystore.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-key-pair-alias.png" alt="keystore explorer key pair alias"></span></p>
+</div>
+<div class="paragraph">
+<p>You will now have to enter a password for the imported keystore. This will be needed when extracting the certificate key pair from the new keystore.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-key-pair-password.png" alt="keystore explorer key pair password"></span></p>
+</div>
+<div class="paragraph">
+<p>The key pair (private key and certificate) has now been loaded into the new keystore, and will be shown in the list. Click the "<em>Save</em>" icon to save the keystore to a file.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-new-keystore-save1.png" alt="keystore explorer new keystore save1"></span></p>
+</div>
+<div class="paragraph">
+<p>You will know have to enter a password for the keystore itself. This will be needed when opening the keystore later.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-keystore-password.png" alt="keystore explorer keystore password"></span></p>
+</div>
+<div class="paragraph">
+<p>Now choose a location for your new keystore and press "<em>Save</em>".</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/keystore-explorer-keystore-password.png" alt="keystore explorer keystore password"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="revoking-a-certificate"><a class="anchor" href="#revoking-a-certificate"></a>6.5.4. Revoking a certificate</h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
@@ -1154,7 +1217,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-01-25 10:53:19 CET
+Last updated 2017-01-25 13:25:34 CET
 </div>
 </div>
 <script type="text/x-mathjax-config">
