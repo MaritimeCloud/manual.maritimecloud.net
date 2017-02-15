@@ -81,7 +81,7 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1__
 [[login]]
 == Login
 
-The MC Portal can be reached at https://management.maritimecloud.net
+The Martime Cloud Management Portal for the **production environment** can be reached at https://management.maritimecloud.net
 
 [[join-the-maritime-cloud-and-get-access-to-the-mc-portal]]
 === Join the Maritime Cloud and get access to the MC Portal
@@ -97,7 +97,7 @@ When your organization is federated into the Maritime Cloud, you can use your no
 
 Choose your organization in the list and you will be redirected to your organization’s federated login page.
 
-image:image6.png[image,width=423,height=266]
+image:broker-login-marked-idps.png[image,width=628,height=333]
 
 Once you have logged in with your organization login you will be redirected back to the MC Portal with access.
 
@@ -106,13 +106,21 @@ Once you have logged in with your organization login you will be redirected back
 
 When your organization is not federated, you will get access through the EfficienSea2 and STM Validation project test users.
 
-image:image7.png[image,width=435,height=285]
+image:broker-login-marked-ptu.png[image,width=628,height=333]
 
 Choose the "__ProjectTestUsers__" and provide your login information in the next page.
 
 image:image8.png[image,width=437,height=243]
 
 You will be redirected to the MC Portal with access.
+
+=== Login to the Test environment
+
+When using the test environment (the MC Portal for the test environment can be reached https://test-management.maritimecloud.net) you can login using the same user as when you log into the production environment. To do this choose the "__MC-production__" Identity Provider.
+
+image:test-broker-login-marked-mc-production.png[image,width=628,height=325]
+
+This will redirect you to the login of the production environment, and you can then login as described in <<login-when-my-organization-is-federated-into-the-maritime-cloud>> or <<login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers>>.
 
 [[access-roles]]
 === Access Roles
