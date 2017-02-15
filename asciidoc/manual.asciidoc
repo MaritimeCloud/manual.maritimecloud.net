@@ -116,7 +116,7 @@ You will be redirected to the MC Portal with access.
 
 === Login to the Test environment
 
-When using the test environment (the MC Portal for the test environment can be reached https://test-management.maritimecloud.net) you can login using the same user as when you log into the production environment. To do this choose the "__MC-production__" Identity Provider.
+When using the test environment (the MC Portal for the test environment can be reached at https://test-management.maritimecloud.net) you can login using the same user as when you log into the production environment. To do this choose the "__MC-production__" Identity Provider when logging in.
 
 image:test-broker-login-marked-mc-production.png[image,width=628,height=325]
 
