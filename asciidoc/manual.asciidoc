@@ -32,7 +32,6 @@
 
 [[purpose-of-the-user-guide]]
 == Purpose of the User Guide
-
 The purpose of this User Guide is to give instructions on how to operate the Maritime Cloud Management Portal (MC Portal). The reader is expected to be familiar with the concepts of the Maritime Cloud. For more information about the Maritime Cloud, please visit the official homepage: http://maritimecloud.net
 
 [[general-focus-of-the-mc-portal]]
@@ -314,7 +313,7 @@ You will now have to enter a password for the imported keystore. This will be ne
 
 image:keystore-explorer-key-pair-password.png[]
 
-The key pair (private key and certificate) has now been loaded into the new keystore, and will be shown in the list. Click the "__Save__" icon to save the keystore to a file. 
+The key pair (private key and certificate) has now been loaded into the new keystore, and will be shown in the list. Click the "__Save__" icon to save the keystore to a file.
 
 image:keystore-explorer-new-keystore-save1.png[]
 
@@ -331,7 +330,17 @@ Then locate the keystore you saved, load it into your application and you should
 [[revoking-a-certificate]]
 ==== Revoking a certificate
 
-Not yet implemented.
+When a certificate needs to be revoked, find the relevant user/vessel/device/service and the certificate that should be revoked at click on "__Revoke__".
+
+image:certificate-revoke1.png[]
+
+This will show a window where you will have to choose a reason and a date for the revocation in the selectors. Once these has been entered you can click "__Revoke__".
+
+image:certificate-revoke2.png[]
+
+The certificate will now have been revoked and the certificate will be marked as such in the certificate list.
+
+image:certificate-revoke3.png[]
 
 [[managing-the-service-registry]]
 == Managing the Service Registry
