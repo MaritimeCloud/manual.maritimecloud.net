@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
-<title>Maritime Cloud Management Portal - User Guide</title>
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<title>MCP Management Portal - User Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -17,7 +17,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +51,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,7 +63,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -91,13 +89,12 @@ strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
 ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
-ul.no-bullet{list-style:none}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -119,18 +116,25 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
-.menuseq,.menu{color:rgba(0,0,0,.8)}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
 b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
 b.button:before{content:"[";padding:0 3px 0 2px}
 b.button:after{content:"]";padding:0 2px 0 3px}
@@ -197,7 +201,7 @@ table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
 table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon img{max-width:initial}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
@@ -253,13 +257,13 @@ table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
 table.tableblock{max-width:100%;border-collapse:separate}
 table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
-table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
-table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
-table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
-table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
-table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
-table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px 0}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
 table.frame-all{border-width:1px}
 table.frame-sides{border-width:0 1px}
 table.frame-topbot{border-width:1px 0}
@@ -280,10 +284,12 @@ ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
-ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
 ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
 ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
 ul.inline>li>*{display:block}
@@ -300,7 +306,8 @@ ol.lowergreek{list-style-type:lower-greek}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:first-of-type{padding:.4em .75em 0 .75em;line-height:1;vertical-align:top}
+.colist>table tr>td:first-of-type img{max-width:initial}
 .colist>table tr>td:last-of-type{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
 .imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
@@ -363,6 +370,7 @@ div.unbreakable{page-break-inside:avoid}
 .yellow{color:#bfbf00}
 .yellow-background{background-color:#fafa00}
 span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
 .admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
 .admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
@@ -416,7 +424,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
 /* Stylesheet for CodeRay to match GitHub theme | MIT License | http://foundation.zurb.com */
 /*pre.CodeRay {background-color:#f7f7f8;}*/
@@ -511,22 +519,22 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="book toc2 toc-right">
 <div id="header">
-<h1>Maritime Cloud Management Portal - User Guide</h1>
+<h1>MCP Management Portal - User Guide</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#purpose-of-the-user-guide">1. Purpose of the User Guide</a></li>
-<li><a href="#general-focus-of-the-mc-portal">2. General focus of the MC Portal</a>
+<li><a href="#general-focus-of-the-mcp-management-portal">2. General focus of the MCP Management Portal</a>
 <ul class="sectlevel2">
-<li><a href="#icons-and-colors-in-the-mc-portal">2.1. Icons and colors in the MC Portal</a></li>
+<li><a href="#icons-and-colors-in-the-mcp-management-portal">2.1. Icons and colors in the MCP Management Portal</a></li>
 </ul>
 </li>
 <li><a href="#not-yet-implemented">3. Not yet implemented</a></li>
 <li><a href="#mrn-maritime-resource-name">4. MRN - Maritime Resource Name</a></li>
 <li><a href="#login">5. Login</a>
 <ul class="sectlevel2">
-<li><a href="#join-the-maritime-cloud-and-get-access-to-the-mc-portal">5.1. Join the Maritime Cloud and get access to the MC Portal</a></li>
-<li><a href="#login-when-my-organization-is-federated-into-the-maritime-cloud">5.2. Login when my organization is federated into the Maritime Cloud</a></li>
+<li><a href="#join-MCP-and-get-access-to-the-mcp-management-portal">5.1. Join MCP and get access to the MCP Management Portal</a></li>
+<li><a href="#login-when-my-organization-is-federated-into-mcp">5.2. Login when my organization is federated into MCP</a></li>
 <li><a href="#login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers">5.3. Login when my organization is part of the Project test phase (ProjectTestUsers)</a></li>
 <li><a href="#login-to-the-test-environment">5.4. Login to the Test environment</a></li>
 <li><a href="#access-roles">5.5. Access Roles</a></li>
@@ -554,25 +562,25 @@ table.CodeRay td.code>pre{padding:0}
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="purpose-of-the-user-guide"><a class="anchor" href="#purpose-of-the-user-guide"></a>1. Purpose of the User Guide</h2>
+<h2 id="purpose-of-the-user-guide"><a class="anchor" href="#purpose-of-the-user-guide"></a><a class="link" href="#purpose-of-the-user-guide">1. Purpose of the User Guide</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The purpose of this User Guide is to give instructions on how to operate the Maritime Cloud Management Portal (MC Portal). The reader is expected to be familiar with the concepts of the Maritime Cloud. For more information about the Maritime Cloud, please visit the official homepage: <a href="http://maritimecloud.net" class="bare">http://maritimecloud.net</a></p>
+<p>The purpose of this User Guide is to give instructions on how to operate the MCP Management Portal (Previously the Maritime Cloud Management Portal). The reader is expected to be familiar with the concepts of MCP. For more information about MCP, please visit the official homepage: <a href="http://maritimeconnectivityplatform.net" class="bare">http://maritimeconnectivityplatform.net</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="general-focus-of-the-mc-portal"><a class="anchor" href="#general-focus-of-the-mc-portal"></a>2. General focus of the MC Portal</h2>
+<h2 id="general-focus-of-the-mcp-management-portal"><a class="anchor" href="#general-focus-of-the-mcp-management-portal"></a><a class="link" href="#general-focus-of-the-mcp-management-portal">2. General focus of the MCP Management Portal</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Everything in the MC Portal is centered around the organization of the logged in user.<br>
+<p>Everything in the MCP Management Portal is centered around the organization of the logged in user.<br>
 Every entity in the Identity Registry section, only has data for the users own organization.<br>
 An organization’s own entities: Vessels, Devices, Users, and Certificates are considered private and will never be shown to others. However, the Service Registry section has the possibility to show data for services of all organizations. Services for other organizations are always in read-only mode though and will never show Certificates - regardless of the user’s administrative rights.</p>
 </div>
 <div class="sect2">
-<h3 id="icons-and-colors-in-the-mc-portal"><a class="anchor" href="#icons-and-colors-in-the-mc-portal"></a>2.1. Icons and colors in the MC Portal</h3>
+<h3 id="icons-and-colors-in-the-mcp-management-portal"><a class="anchor" href="#icons-and-colors-in-the-mcp-management-portal"></a><a class="link" href="#icons-and-colors-in-the-mcp-management-portal">2.1. Icons and colors in the MCP Management Portal</a></h3>
 <div class="paragraph">
-<p>Icons and colors in the MC Portal follow the standard in the table:</p>
+<p>Icons and colors in the MCP Management Portal follow the standard in the table:</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -612,7 +620,7 @@ An organization’s own entities: Vessels, Devices, Users, and Certificates are 
 </div>
 </div>
 <div class="sect1">
-<h2 id="not-yet-implemented"><a class="anchor" href="#not-yet-implemented"></a>3. Not yet implemented</h2>
+<h2 id="not-yet-implemented"><a class="anchor" href="#not-yet-implemented"></a><a class="link" href="#not-yet-implemented">3. Not yet implemented</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Management Portal is still in early beta; thus many features are not yet implemented. If a section in this guide is "not yet implemented", but is needed or wanted, (e.g. deletion of services) please file an issue at the <a href="https://github.com/MaritimeCloud/MaritimeCloudPortal/issues">Github project</a>.</p>
@@ -620,10 +628,10 @@ An organization’s own entities: Vessels, Devices, Users, and Certificates are 
 </div>
 </div>
 <div class="sect1">
-<h2 id="mrn-maritime-resource-name"><a class="anchor" href="#mrn-maritime-resource-name"></a>4. MRN - Maritime Resource Name</h2>
+<h2 id="mrn-maritime-resource-name"><a class="anchor" href="#mrn-maritime-resource-name"></a><a class="link" href="#mrn-maritime-resource-name">4. MRN - Maritime Resource Name</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Every entity in the Maritime Cloud requires an MRN. For entities in the Identity Registry (e.g. Vessels) the MRN is autogenerated following the mask:<br>
+<p>Every entity in the Maritime Connectivity Platform requires an MRN. For entities in the Identity Registry (e.g. Vessels) the MRN is autogenerated following the mask:<br>
 <em>urn:mrn:&lt;mcl|stm&gt;:&lt;entity-type&gt;:&lt;org-shortname&gt;:&lt;entityID&gt;</em></p>
 </div>
 <div class="paragraph">
@@ -643,24 +651,24 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="login"><a class="anchor" href="#login"></a>5. Login</h2>
+<h2 id="login"><a class="anchor" href="#login"></a><a class="link" href="#login">5. Login</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Martime Cloud Management Portal for the <strong>production environment</strong> can be reached at <a href="https://management.maritimecloud.net" class="bare">https://management.maritimecloud.net</a></p>
+<p>The MCP Management Portal for the <strong>production environment</strong> can be reached at <a href="https://management.maritimecloud.net" class="bare">https://management.maritimecloud.net</a></p>
 </div>
 <div class="sect2">
-<h3 id="join-the-maritime-cloud-and-get-access-to-the-mc-portal"><a class="anchor" href="#join-the-maritime-cloud-and-get-access-to-the-mc-portal"></a>5.1. Join the Maritime Cloud and get access to the MC Portal</h3>
+<h3 id="join-MCP-and-get-access-to-the-mcp-management-portal"><a class="anchor" href="#join-MCP-and-get-access-to-the-mcp-management-portal"></a><a class="link" href="#join-MCP-and-get-access-to-the-mcp-management-portal">5.1. Join MCP and get access to the MCP Management Portal</a></h3>
 <div class="paragraph">
-<p>To get access to the MC Portal your organization must be enrolled in the Maritime Cloud by a person who holds the legal rights to act on behalf of the organization. Please follow the "<em>Join</em>" link on the MC Portal login page to fill out the application form. The organization will be validated and approved by a Maritime Cloud governance organization, after which the applying organization will get access to the MC Portal.</p>
+<p>To get access to the MCP Management Portal your organization must be enrolled in MCP by a person who holds the legal rights to act on behalf of the organization. Please follow the "<em>Join</em>" link on the MCP Management Portal login page to fill out the application form. The organization will be validated and approved by a MCP governance organization, after which the applying organization will get access to the MCP Management Portal.</p>
 </div>
 <div class="paragraph">
 <p>In the test period in the EfficienSea2 and STM Validation project, the governing organization will be the Danish Maritime Authority.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="login-when-my-organization-is-federated-into-the-maritime-cloud"><a class="anchor" href="#login-when-my-organization-is-federated-into-the-maritime-cloud"></a>5.2. Login when my organization is federated into the Maritime Cloud</h3>
+<h3 id="login-when-my-organization-is-federated-into-mcp"><a class="anchor" href="#login-when-my-organization-is-federated-into-mcp"></a><a class="link" href="#login-when-my-organization-is-federated-into-mcp">5.2. Login when my organization is federated into MCP</a></h3>
 <div class="paragraph">
-<p>When your organization is federated into the Maritime Cloud, you can use your normal organization login (probably your Windows login).</p>
+<p>When your organization is federated into MCP, you can use your normal organization login (probably your Windows login).</p>
 </div>
 <div class="paragraph">
 <p>Choose your organization in the list and you will be redirected to your organization’s federated login page.</p>
@@ -669,11 +677,11 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 <p><span class="image"><img src="images/broker-login-marked-idps.png" alt="image" width="628" height="333"></span></p>
 </div>
 <div class="paragraph">
-<p>Once you have logged in with your organization login you will be redirected back to the MC Portal with access.</p>
+<p>Once you have logged in with your organization login you will be redirected back to the MCP Management Portal with access.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers"><a class="anchor" href="#login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers"></a>5.3. Login when my organization is part of the Project test phase (ProjectTestUsers)</h3>
+<h3 id="login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers"><a class="anchor" href="#login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers"></a><a class="link" href="#login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers">5.3. Login when my organization is part of the Project test phase (ProjectTestUsers)</a></h3>
 <div class="paragraph">
 <p>When your organization is not federated, you will get access through the EfficienSea2 and STM Validation project test users.</p>
 </div>
@@ -687,25 +695,25 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 <p><span class="image"><img src="images/image8.png" alt="image" width="437" height="243"></span></p>
 </div>
 <div class="paragraph">
-<p>You will be redirected to the MC Portal with access.</p>
+<p>You will be redirected to the MCP Management Portal with access.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="login-to-the-test-environment"><a class="anchor" href="#login-to-the-test-environment"></a>5.4. Login to the Test environment</h3>
+<h3 id="login-to-the-test-environment"><a class="anchor" href="#login-to-the-test-environment"></a><a class="link" href="#login-to-the-test-environment">5.4. Login to the Test environment</a></h3>
 <div class="paragraph">
-<p>When using the test environment (the MC Portal for the test environment can be reached at <a href="https://test-management.maritimecloud.net" class="bare">https://test-management.maritimecloud.net</a>) you can login using the same user as when you log into the production environment. To do this choose the "<em>MC-production</em>" Identity Provider when logging in.</p>
+<p>When using the test environment (the MCP Management Portal for the test environment can be reached at <a href="https://test-management.maritimecloud.net" class="bare">https://test-management.maritimecloud.net</a>) you can login using the same user as when you log into the production environment. To do this choose the "<em>MC-production</em>" Identity Provider when logging in.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="images/test-broker-login-marked-mc-production.png" alt="image" width="628" height="325"></span></p>
 </div>
 <div class="paragraph">
-<p>This will redirect you to the login of the production environment, and you can then login as described in <a href="#login-when-my-organization-is-federated-into-the-maritime-cloud">Login when my organization is federated into the Maritime Cloud</a> or <a href="#login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers">Login when my organization is part of the Project test phase (ProjectTestUsers)</a>.</p>
+<p>This will redirect you to the login of the production environment, and you can then login as described in <a href="#login-when-my-organization-is-federated-into-the-maritime-cloud">[login-when-my-organization-is-federated-into-the-maritime-cloud]</a> or <a href="#login-when-my-organization-is-part-of-the-project-test-phase-projecttestusers">Login when my organization is part of the Project test phase (ProjectTestUsers)</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="access-roles"><a class="anchor" href="#access-roles"></a>5.5. Access Roles</h3>
+<h3 id="access-roles"><a class="anchor" href="#access-roles"></a><a class="link" href="#access-roles">5.5. Access Roles</a></h3>
 <div class="paragraph">
-<p>The MC Portal currently has 2 different roles. Administrator with full editorial rights (for own organization only) and Member with read-only rights.</p>
+<p>The MCP Management Portal currently has 2 different roles. Administrator with full editorial rights (for own organization only) and Member with read-only rights.</p>
 </div>
 <div class="paragraph">
 <p>The intention is to implement a finer grained access roles - for example, admin roles for only the Identity Registry and only the Service Registry etc.</p>
@@ -714,7 +722,7 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="managing-the-identity-registry"><a class="anchor" href="#managing-the-identity-registry"></a>6. Managing the Identity Registry</h2>
+<h2 id="managing-the-identity-registry"><a class="anchor" href="#managing-the-identity-registry"></a><a class="link" href="#managing-the-identity-registry">6. Managing the Identity Registry</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The entities in your organizations Identity Registry can be found in the menu.</p>
@@ -726,12 +734,12 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 <p>The following subsections will explain how each entity is managed.</p>
 </div>
 <div class="sect2">
-<h3 id="my-organization"><a class="anchor" href="#my-organization"></a>6.1. My Organization</h3>
+<h3 id="my-organization"><a class="anchor" href="#my-organization"></a><a class="link" href="#my-organization">6.1. My Organization</a></h3>
 <div class="paragraph">
-<p>This is the "home" of the MC Portal. Here you can find various information about your own organization, like contact info, certificates (for organization level), Access Roles, etc.</p>
+<p>This is the "home" of the MCP Management Portal. Here you can find various information about your own organization, like contact info, certificates (for organization level), Access Roles, etc.</p>
 </div>
 <div class="sect3">
-<h4 id="update-contact-information"><a class="anchor" href="#update-contact-information"></a>6.1.1. Update contact information</h4>
+<h4 id="update-contact-information"><a class="anchor" href="#update-contact-information"></a><a class="link" href="#update-contact-information">6.1.1. Update contact information</a></h4>
 <div class="paragraph">
 <p>To update the contact information of your organization, click the "<em>Update</em>" button on the "<em>My Organization</em>" page.</p>
 </div>
@@ -746,9 +754,9 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="change-logo"><a class="anchor" href="#change-logo"></a>6.1.2. Change logo</h4>
+<h4 id="change-logo"><a class="anchor" href="#change-logo"></a><a class="link" href="#change-logo">6.1.2. Change logo</a></h4>
 <div class="paragraph">
-<p>You can change the logo of your organization. The logo is only used in the list of organizations, which every user of the MC Portal can see. Should no logo be uploaded, a default logo will be displayed.</p>
+<p>You can change the logo of your organization. The logo is only used in the list of organizations, which every user of the MCP Management Portal can see. Should no logo be uploaded, a default logo will be displayed.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="images/image12.png" alt="image" width="766" height="285"></span></p>
@@ -761,20 +769,20 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="access-roles-1"><a class="anchor" href="#access-roles-1"></a>6.1.3. Access Roles</h4>
+<h4 id="access-roles-1"><a class="anchor" href="#access-roles-1"></a><a class="link" href="#access-roles-1">6.1.3. Access Roles</a></h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="identity-provider-information"><a class="anchor" href="#identity-provider-information"></a>6.1.4. Identity Provider information</h4>
+<h4 id="identity-provider-information"><a class="anchor" href="#identity-provider-information"></a><a class="link" href="#identity-provider-information">6.1.4. Identity Provider information</a></h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="vessels-devices"><a class="anchor" href="#vessels-devices"></a>6.2. Vessels &amp; Devices</h3>
+<h3 id="vessels-devices"><a class="anchor" href="#vessels-devices"></a><a class="link" href="#vessels-devices">6.2. Vessels &amp; Devices</a></h3>
 <div class="paragraph">
 <p>The management of Vessels and Devices is handled in the same way. Therefore, the examples in this section apply for both.</p>
 </div>
@@ -782,7 +790,7 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 <p>Note: the only reason for creating Vessels and Devices is if you need a certificate for the Vessel or Device concerned. Read more about management of certificates in the section <a href="#certificates">Certificates</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="create"><a class="anchor" href="#create"></a>6.2.1. Create</h4>
+<h4 id="create"><a class="anchor" href="#create"></a><a class="link" href="#create">6.2.1. Create</a></h4>
 <div class="paragraph">
 <p>To create a Vessel or Device, click the "+" in the list.</p>
 </div>
@@ -797,7 +805,7 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="update"><a class="anchor" href="#update"></a>6.2.2. Update</h4>
+<h4 id="update"><a class="anchor" href="#update"></a><a class="link" href="#update">6.2.2. Update</a></h4>
 <div class="paragraph">
 <p>To create a Vessel or Device, choose it in the list and click the "<em>Update</em>" button on the details page.</p>
 </div>
@@ -815,7 +823,7 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete"><a class="anchor" href="#delete"></a>6.2.3. Delete</h4>
+<h4 id="delete"><a class="anchor" href="#delete"></a><a class="link" href="#delete">6.2.3. Delete</a></h4>
 <div class="paragraph">
 <p>Warning: If you delete an entity, all issued certificates will be revoked and become invalid.</p>
 </div>
@@ -828,40 +836,40 @@ urn:mrn:mcl:service:instance:dma:nw-nm-rest-1</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="users"><a class="anchor" href="#users"></a>6.3. Users</h3>
+<h3 id="users"><a class="anchor" href="#users"></a><a class="link" href="#users">6.3. Users</a></h3>
 <div class="paragraph">
-<p>"Users" in this context refers to human users. Users can authenticate using the Openid Connect Identity Provider, or use a certificate issued by the Maritime Cloud.</p>
+<p>"Users" in this context refers to human users. Users can authenticate using the Openid Connect Identity Provider, or use a certificate issued by MCP.</p>
 </div>
 <div class="sect3">
-<h4 id="create-1"><a class="anchor" href="#create-1"></a>6.3.1. Create</h4>
+<h4 id="create-1"><a class="anchor" href="#create-1"></a><a class="link" href="#create-1">6.3.1. Create</a></h4>
 <div class="paragraph">
-<p>If an organization is federated into the Maritime Cloud, you do not need to create users!<br>
-The users will automatically be created the first time they log in on a webpage that uses Maritime Cloud, such as the MC Management Portal.</p>
+<p>If an organization is federated into MCP, you do not need to create users!<br>
+The users will automatically be created the first time they log in on a webpage that uses MCP, such as the MCP Management Portal.</p>
 </div>
 <div class="paragraph">
-<p>If an organization is not federated into the Maritime Cloud and is using the "<em>ProjectTestUsers</em>" Identity Provider, users must be created manually in the Management Portal. When the user has been created, he/she will receive an email with instructions for how to log in with a temporary password.</p>
+<p>If an organization is not federated into MCP and is using the "<em>ProjectTestUsers</em>" Identity Provider, users must be created manually in the Management Portal. When the user has been created, he/she will receive an email with instructions for how to log in with a temporary password.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-1"><a class="anchor" href="#update-1"></a>6.3.2. Update</h4>
+<h4 id="update-1"><a class="anchor" href="#update-1"></a><a class="link" href="#update-1">6.3.2. Update</a></h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
 <div class="paragraph">
-<p>When an organization is federated into the Maritime Cloud, <em>users are automatically created and updated</em> when they log in on a webpage that uses Maritime Cloud, such as the MC Management Portal.</p>
+<p>When an organization is federated into MCP, <em>users are automatically created and updated</em> when they log in on a webpage that uses MCP, such as the MC Management Portal.</p>
 </div>
 <div class="paragraph">
-<p>In the case that an organization is not federated into the Maritime Cloud, but is using the "<em>ProjectTestUsers</em>" Identity Provider, users must be updated manually in the Management Portal.<br>
+<p>In the case that an organization is not federated into MCP, but is using the "<em>ProjectTestUsers</em>" Identity Provider, users must be updated manually in the Management Portal.<br>
 Updating the password of a user cannot be done in the portal, this must be done from the "<em>ProjectTestUsers</em>" Identity Provider.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete-1"><a class="anchor" href="#delete-1"></a>6.3.3. Delete</h4>
+<h4 id="delete-1"><a class="anchor" href="#delete-1"></a><a class="link" href="#delete-1">6.3.3. Delete</a></h4>
 <div class="paragraph">
-<p>For organizations, which is federated into the Maritime Cloud, users are automatically created or updated when they log in on a webpage that uses Maritime Cloud, such as the MC Management Portal. Therefore, deleting users does not make much sense for federated organizations, unless it is necessary to clean up the user list, or to remove all the users’ certificates.</p>
+<p>For organizations, which is federated into MCP, users are automatically created or updated when they log in on a webpage that uses MCP, such as the MCP Management Portal. Therefore, deleting users does not make much sense for federated organizations, unless it is necessary to clean up the user list, or to remove all the users’ certificates.</p>
 </div>
 <div class="paragraph">
-<p>If an organization is not federated into the Maritime Cloud and is using the "<em>ProjectTestUsers</em>" Identity Provider, users can be deleted from the portal. This will also remove the user from the "<em>ProjectTestUsers</em>" Identity Provider. The user will no longer be able to log in to Maritime Cloud services.</p>
+<p>If an organization is not federated into MCP and is using the "<em>ProjectTestUsers</em>" Identity Provider, users can be deleted from the portal. This will also remove the user from the "<em>ProjectTestUsers</em>" Identity Provider. The user will no longer be able to log in to access MCP services.</p>
 </div>
 <div class="paragraph">
 <p><em>When a user is deleted all of the user’s certificates are revoked.</em></p>
@@ -869,27 +877,27 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect2">
-<h3 id="permissions"><a class="anchor" href="#permissions"></a>6.4. Permissions</h3>
+<h3 id="permissions"><a class="anchor" href="#permissions"></a><a class="link" href="#permissions">6.4. Permissions</a></h3>
 <div class="paragraph">
 <p>"Permissions" is a field which service providers can use to implement a method of access control (authorization) in their services. As an example, an organization could wish to grant extended access to a service for all their pilots from a single point of control. The permissions field is a way to facilitate this.</p>
 </div>
 <div class="paragraph">
-<p>For a more thorough explanation and example, please refer to the <a href="http://developers.maritimecloud.net/identity/index.html#authorization">online documentation for authorization in the Maritime Cloud.</a></p>
+<p>For a more thorough explanation and example, please refer to the <a href="http://developers.maritimecloud.net/identity/index.html#authorization">online documentation for authorization in MCP.</a></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="certificates"><a class="anchor" href="#certificates"></a>6.5. Certificates</h3>
+<h3 id="certificates"><a class="anchor" href="#certificates"></a><a class="link" href="#certificates">6.5. Certificates</a></h3>
 <div class="paragraph">
-<p>Certificates can be issued on all entities in the Maritime Cloud (e.g. Devices, Vessels, Users, Organizations, Services). For a better understanding of how certificates is used in the Maritime Cloud and which parameters is included, please refer to the <a href="http://developers.maritimecloud.net/identity/index.html#pki-and-x-509-certificates">online documentation</a>.</p>
+<p>Certificates can be issued on all entities in MCP (e.g. Devices, Vessels, Users, Organizations, Services). For a better understanding of how certificates is used in MCP and which parameters is included, please refer to the <a href="http://developers.maritimecloud.net/identity/index.html#pki-and-x-509-certificates">online documentation</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="information-in-the-certificate"><a class="anchor" href="#information-in-the-certificate"></a>6.5.1. Information in the certificate</h4>
+<h4 id="information-in-the-certificate"><a class="anchor" href="#information-in-the-certificate"></a><a class="link" href="#information-in-the-certificate">6.5.1. Information in the certificate</a></h4>
 <div class="paragraph">
 <p>In the certificate, there are several information’s about the entity. Please refer to the <a href="http://developers.maritimecloud.net/identity/index.html#certificate-attributes">online documentation</a>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="issuing-a-certificate"><a class="anchor" href="#issuing-a-certificate"></a>6.5.2. Issuing a certificate</h4>
+<h4 id="issuing-a-certificate"><a class="anchor" href="#issuing-a-certificate"></a><a class="link" href="#issuing-a-certificate">6.5.2. Issuing a certificate</a></h4>
 <div class="paragraph">
 <p>On every entity details page, there is a certificate section. This section is the same component for all entities. Therefore, the description and examples applies for all.</p>
 </div>
@@ -916,7 +924,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="converting-the-certificate-to-a-different-format"><a class="anchor" href="#converting-the-certificate-to-a-different-format"></a>6.5.3. Converting the certificate to a different format</h4>
+<h4 id="converting-the-certificate-to-a-different-format"><a class="anchor" href="#converting-the-certificate-to-a-different-format"></a><a class="link" href="#converting-the-certificate-to-a-different-format">6.5.3. Converting the certificate to a different format</a></h4>
 <div class="paragraph">
 <p>The issued certificate is supplied in PEM (also known as PKCS #8) format, but it can easily be converted into other formats. There are several tools available that can do this, but we will recommend <a href="http://keystore-explorer.org">KeyStore Explorer</a> which is a free, crossplatform and userfriendly tool. If you download, install and run KeyStore Explorer you will see this screen:</p>
 </div>
@@ -982,7 +990,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="revoking-a-certificate"><a class="anchor" href="#revoking-a-certificate"></a>6.5.4. Revoking a certificate</h4>
+<h4 id="revoking-a-certificate"><a class="anchor" href="#revoking-a-certificate"></a><a class="link" href="#revoking-a-certificate">6.5.4. Revoking a certificate</a></h4>
 <div class="paragraph">
 <p>When a certificate needs to be revoked, find the relevant user/vessel/device/service and the certificate that should be revoked at click on "<em>Revoke</em>".</p>
 </div>
@@ -1006,7 +1014,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect1">
-<h2 id="managing-the-service-registry"><a class="anchor" href="#managing-the-service-registry"></a>7. Managing the Service Registry</h2>
+<h2 id="managing-the-service-registry"><a class="anchor" href="#managing-the-service-registry"></a><a class="link" href="#managing-the-service-registry">7. Managing the Service Registry</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Service Registry consists of 3 levels:</p>
@@ -1025,7 +1033,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </ul>
 </div>
 <div class="paragraph">
-<p>For more information of the 3 levels and how they are connected, please refer to the online documentation at <a href="http://maritimecloud.net" class="bare">http://maritimecloud.net</a> or the "<em>How To?</em>" page in the MC Portal.</p>
+<p>For more information of the 3 levels and how they are connected, please refer to the online documentation at <a href="http://maritimeconnectivityplatform.net" class="bare">http://maritimeconnectivityplatform.net</a> or the "<em>How To?</em>" page in the MCP Management Portal.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="images/image23.png" alt="image" width="784" height="399"></span></p>
@@ -1037,9 +1045,9 @@ Updating the password of a user cannot be done in the portal, this must be done 
 <p>Note: At the moment, service data is shown for all organizations with no possibility to filter or search. In the future, there will be filtering and searching options. Service data for other organizations is always in read-only mode though and will never show Certificates - regardless of the user’s administrative rights.</p>
 </div>
 <div class="sect2">
-<h3 id="services-specification"><a class="anchor" href="#services-specification"></a>7.1. Services Specification</h3>
+<h3 id="services-specification"><a class="anchor" href="#services-specification"></a><a class="link" href="#services-specification">7.1. Services Specification</a></h3>
 <div class="sect3">
-<h4 id="view-and-download"><a class="anchor" href="#view-and-download"></a>7.1.1. View and download</h4>
+<h4 id="view-and-download"><a class="anchor" href="#view-and-download"></a><a class="link" href="#view-and-download">7.1.1. View and download</a></h4>
 <div class="paragraph">
 <p>To view a Specification, click "<em>Specifications</em>" in the menu and a list of specifications appear. Click on any column of a row in the list to view that Specification.</p>
 </div>
@@ -1057,7 +1065,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="createregister"><a class="anchor" href="#createregister"></a>7.1.2. Create/Register</h4>
+<h4 id="createregister"><a class="anchor" href="#createregister"></a><a class="link" href="#createregister">7.1.2. Create/Register</a></h4>
 <div class="paragraph">
 <p>To register a new Specification, click "<em>Specifications</em>" in the menu and a list of specifications appear. Click the "<em>Register new Specification</em>" button at the bottom of the list.</p>
 </div>
@@ -1088,22 +1096,22 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-2"><a class="anchor" href="#update-2"></a>7.1.3. Update</h4>
+<h4 id="update-2"><a class="anchor" href="#update-2"></a><a class="link" href="#update-2">7.1.3. Update</a></h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete-2"><a class="anchor" href="#delete-2"></a>7.1.4. Delete</h4>
+<h4 id="delete-2"><a class="anchor" href="#delete-2"></a><a class="link" href="#delete-2">7.1.4. Delete</a></h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="service-technical-design"><a class="anchor" href="#service-technical-design"></a>7.2. Service Technical Design</h3>
+<h3 id="service-technical-design"><a class="anchor" href="#service-technical-design"></a><a class="link" href="#service-technical-design">7.2. Service Technical Design</a></h3>
 <div class="sect3">
-<h4 id="view-and-download-1"><a class="anchor" href="#view-and-download-1"></a>7.2.1. View and download</h4>
+<h4 id="view-and-download-1"><a class="anchor" href="#view-and-download-1"></a><a class="link" href="#view-and-download-1">7.2.1. View and download</a></h4>
 <div class="paragraph">
 <p>To view a Technical Design, click "<em>Designs</em>" in the menu and a list of Technical Designs appear. Click on any column of a row in the list to view that Design.</p>
 </div>
@@ -1124,7 +1132,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="createregister-1"><a class="anchor" href="#createregister-1"></a>7.2.2. Create/Register</h4>
+<h4 id="createregister-1"><a class="anchor" href="#createregister-1"></a><a class="link" href="#createregister-1">7.2.2. Create/Register</a></h4>
 <div class="paragraph">
 <p>To register a new Technical Design, you need to select the Specification you want the Technical Design to implement. When the Specification is selected, you should click on the "<em>Register new Design</em>" at the Specification details page.</p>
 </div>
@@ -1155,22 +1163,22 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-3"><a class="anchor" href="#update-3"></a>7.2.3. Update</h4>
+<h4 id="update-3"><a class="anchor" href="#update-3"></a><a class="link" href="#update-3">7.2.3. Update</a></h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete-3"><a class="anchor" href="#delete-3"></a>7.2.4. Delete</h4>
+<h4 id="delete-3"><a class="anchor" href="#delete-3"></a><a class="link" href="#delete-3">7.2.4. Delete</a></h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="service-instance"><a class="anchor" href="#service-instance"></a>7.3. Service Instance</h3>
+<h3 id="service-instance"><a class="anchor" href="#service-instance"></a><a class="link" href="#service-instance">7.3. Service Instance</a></h3>
 <div class="sect3">
-<h4 id="view-and-download-2"><a class="anchor" href="#view-and-download-2"></a>7.3.1. View and download</h4>
+<h4 id="view-and-download-2"><a class="anchor" href="#view-and-download-2"></a><a class="link" href="#view-and-download-2">7.3.1. View and download</a></h4>
 <div class="paragraph">
 <p>To view an Instance, click "<em>Instances</em>" in the menu and a list of Instances appear. Click on any column of a row in the list to view that Instance.</p>
 </div>
@@ -1191,7 +1199,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="createregister-2"><a class="anchor" href="#createregister-2"></a>7.3.2. Create/Register</h4>
+<h4 id="createregister-2"><a class="anchor" href="#createregister-2"></a><a class="link" href="#createregister-2">7.3.2. Create/Register</a></h4>
 <div class="paragraph">
 <p>To register a new Instance, you need to select the Technical Design you want the Instance to implement. When the Technical Design is selected, you should click on the "<em>Register new Instance</em>" at the Technical Design details page.</p>
 </div>
@@ -1225,20 +1233,20 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 </div>
 <div class="sect3">
-<h4 id="update-4"><a class="anchor" href="#update-4"></a>7.3.3. Update</h4>
+<h4 id="update-4"><a class="anchor" href="#update-4"></a><a class="link" href="#update-4">7.3.3. Update</a></h4>
 <div class="paragraph">
 <p>Not yet implemented</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete-4"><a class="anchor" href="#delete-4"></a>7.3.4. Delete</h4>
+<h4 id="delete-4"><a class="anchor" href="#delete-4"></a><a class="link" href="#delete-4">7.3.4. Delete</a></h4>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="searching-the-service-registry"><a class="anchor" href="#searching-the-service-registry"></a>7.4. Searching the Service Registry</h3>
+<h3 id="searching-the-service-registry"><a class="anchor" href="#searching-the-service-registry"></a><a class="link" href="#searching-the-service-registry">7.4. Searching the Service Registry</a></h3>
 <div class="paragraph">
 <p>Not yet implemented.</p>
 </div>
@@ -1248,7 +1256,7 @@ Updating the password of a user cannot be done in the portal, this must be done 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-03-01 13:51:35 CET
+Last updated 2017-09-29 14:44:34 CEST
 </div>
 </div>
 <script type="text/x-mathjax-config">
