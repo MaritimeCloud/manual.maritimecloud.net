@@ -230,8 +230,6 @@ If an organization is not federated into MCP and is using the "__ProjectTestUser
 [[update-1]]
 ==== Update
 
-Not yet implemented.
-
 When an organization is federated into MCP, _users are automatically created and updated_ when they log in on a webpage that uses MCP, such as the MC Management Portal.
 
 In the case that an organization is not federated into MCP, but is using the "__ProjectTestUsers__" Identity Provider, users must be updated manually in the Management Portal. +
