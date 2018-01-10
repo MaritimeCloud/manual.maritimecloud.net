@@ -249,7 +249,7 @@ _When a user is deleted all of the user’s certificates are revoked._
 
 "Permissions" is a field which service providers can use to implement a method of access control (authorization) in their services. As an example, an organization could wish to grant extended access to a service for all their pilots from a single point of control. The permissions field is a way to facilitate this.
 
-For a more thorough explanation and example, please refer to the http://developers.maritimecloud.net/identity/index.html#authorization[online documentation for authorization in MCP.]
+For a more thorough explanation and example, please refer to the http://developers.maritimeconnectivity.net/identity/index.html#authorization[online documentation for authorization in MCP.]
 
 [[certificates]]
 === Certificates
@@ -259,7 +259,7 @@ Certificates can be issued on all entities in MCP (e.g. Devices, Vessels, Users,
 [[information-in-the-certificate]]
 ==== Information in the certificate
 
-In the certificate, there are several information’s about the entity. Please refer to the http://developers.maritimecloud.net/identity/index.html#certificate-attributes[online documentation].
+In the certificate, there are several information’s about the entity. Please refer to the http://developers.maritimeconnectivity.net/identity/index.html#certificate-attributes[online documentation].
 
 [[issuing-a-certificate]]
 ==== Issuing a certificate
@@ -274,13 +274,15 @@ Click on "__Issue Certificate__".
 
 image:image21.png[image,width=369,height=213]
 
-And that is it. A certificate has been issued and is ready for download.
+And that is it. A certificate has been issued and is ready for download. 
+
+When you download you will receive a zip file that contains public key, private key and certificate in PEM format, and the certificate in .p12 and .jks keystores. The password for the keystores are written in a .txt file that is also contained in the zip file. 
 
 image:image22.png[image,width=374,height=148]
 
 __NOTE__: It is very important that you download the certificate, because it is the only time, that you can download the public- and private key.
 
-
+/////////////////////////////////////////////////////
 ==== Converting the certificate to a different format
 
 The issued certificate is supplied in PEM (also known as PKCS #8) format, but it can easily be converted into other formats. There are several tools available that can do this, but we will recommend http://keystore-explorer.org[KeyStore Explorer] which is a free, crossplatform and userfriendly tool. If you download, install and run KeyStore Explorer you will see this screen:
@@ -324,7 +326,7 @@ Now choose a location for your new keystore and press "__Save__".
 image:keystore-explorer-new-keystore-save2.png[]
 
 Then locate the keystore you saved, load it into your application and you should be ready to authenticate using your client certificate.
-
+/////////////////////////////////////////////////////
 [[revoking-a-certificate]]
 ==== Revoking a certificate
 
