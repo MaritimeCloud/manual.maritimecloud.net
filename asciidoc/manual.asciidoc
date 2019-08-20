@@ -32,7 +32,7 @@
 
 [[purpose-of-the-user-guide]]
 == Purpose of the User Guide
-The purpose of this User Guide is to give instructions on how to operate the MCP Management Portal (Previously the Maritime Cloud Management Portal). The reader is expected to be familiar with the concepts of MCP. For more information about MCP, please visit the official homepage: http://maritimeconnectivityplatform.net
+The purpose of this User Guide is to give instructions on how to operate the MCP Management Portal (Previously the Maritime Cloud Management Portal). The reader is expected to be familiar with the concepts of MCP. For more information about MCP, please visit the official homepage: https://maritimeconnectivity.net
 
 [[general-focus-of-the-mcp-management-portal]]
 == General focus of the MCP Management Portal
